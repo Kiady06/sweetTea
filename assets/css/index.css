@@ -1,107 +1,210 @@
 @import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+:root {
+    /* Couleurs Principales (Thé & Nature) */
+    --color-primary: #1B3C26;        /* Vert Sombre : Identité forte, headers, titres */
+    --color-secondary: #A3C9A8;      /* Vert Tendre : Accents légers, bordures, hover */
+    
+    /* Couleur d'Action (Accent) */
+    --color-accent: #F28D61;         /* Orange Corail : Boutons, prix, éléments cliquables */
+    --color-accent-hover: #E57B4D;   /* Version légèrement plus sombre pour le survol */
+
+    /* Couleurs de Neutres & Fond */
+    --color-bg-main: #EAEAEA;        /* Gris Logo : Fond de page très doux */
+    --color-text-main: #333333;      /* Anthracite : Texte principal (confort de lecture) */
+    --color-white: #FFFFFF;          /* Blanc pur : Pour les cartes ou éléments en relief */
+}
+
+h1 {
+  font-family: 'Cherry Bomb One';
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Quicksand';
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #eaeaea;
-  gap: 5ch;
-  padding-bottom: 25ch;
+  background-color: var(--color-bg-main);
+  height: 100vh;
 }
-
-.leaf-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; 
-    overflow: hidden;
-    pointer-events: none;
-}
-
-.leaf {
-    position: absolute;
-    width: 20px;
-    height: 35px;
-    background-color: #76C043;
-    border-radius: 0 100% 0 100%;
-    opacity: 0.3;
-    filter: blur(1px);
-}
-
-@keyframes fall {
-    0% {
-        transform: translate(0, -10vh) rotate(0deg);
-        opacity: 0;
-    }
-    15% {
-        opacity: 0.3;
-    }
-    25% {
-        transform: translate(20px, 25vh) rotate(15deg);
-    }
-    50% {
-        transform: translate(-15px, 50vh) rotate(-10deg);
-    }
-    75% {
-        transform: translate(25px, 75vh) rotate(20deg);
-    }
-    100% {
-        transform: translate(0px, 110vh) rotate(45deg);
-        opacity: 0;
-    }
-}
-
-.leaf:nth-child(1) { left: 10%; animation: fall 15s infinite linear; }
-.leaf:nth-child(2) { left: 40%; animation: fall 18s infinite linear 2s; }
-.leaf:nth-child(3) { left: 70%; animation: fall 20s infinite linear 5s; }
-.leaf:nth-child(4) { left: 90%; animation: fall 12s infinite linear 1s; }
 
 header {
-  background-color: #eaeaea;
+  display: flex;
+  height: 6rem;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  padding: 2ch;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+header > a {
+  height: 120%;
   display: flex;
   align-items: center;
-  gap: 2ch;
-  margin-top: 2ch;
+  
 }
 
 header img {
-  width: 10em;
-  object-fit: cover;
-  box-shadow: 0 20px 50px #A3C9A8;
-  border-radius: 50%;
+  height: 120%;
+  width: auto;
+  object-fit: contain;
 }
 
-header h1 {
-  font-family: "Cherry Bomb one", cursive;
-  letter-spacing: 0.02em;
-  color: #1e5b32;
-  font-size: 4rem;
-  text-shadow: 2px 2px 0 white;
+.header-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 40px;
 }
 
-header h1 {
-  font-size: 5rem;
+.header-list-links a { 
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.header-list-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.header-list-links a:hover::after {
+  width: 100%;
 }
 
 main {
-  width: 80vw;
-  height: 90vh;
-  background: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  margin: 0 auto;
+  padding: 2ch;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  color: var(--color-primary);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--color-text-main);
+  margin-bottom: 35px;
+  max-width: 500px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 18px 35px;
   border-radius: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  padding: 5ch;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(242, 141, 97, 0.3);
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background-color: var(--color-accent-hover);
+}
+
+.hero-image {
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 110%;
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background-color: var(--color-white);
+  padding: 40px 30px;
+  border-radius: 35px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid var(--color-primary);
+}
+
+/* L'effet de survol qui "soulève" la carte */
+.feature-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(27, 60, 38, 0.08); /* Ombre légère avec ton Vert Sombre */
+  border-color: var(--color-secondary);
+}
+
+.icon-wrapper {
+  font-size: 3rem;
+  background-color: var(--color-bg-main);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.feature-card:hover .icon-wrapper {
+  background-color: var(--color-secondary); /* Devient vert tendre au survol */
+}
+
+.feature-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  color: var(--color-text-main);
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
 }

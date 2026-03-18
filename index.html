@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="assets/img/logo-sans-fond.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="assets/img/logo-sans-fond.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/index.css" />
     <title>Sweet tea by family</title>
   </head>
@@ -24,6 +20,7 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <section class="hero">
         <div class="hero-content">
@@ -44,32 +41,192 @@
           />
         </div>
       </section>
+
       <section class="features">
         <div class="feature-card">
-          <div class="icon-wrapper">🍃</div>
+          <div class="icon-wrapper">
+            <!-- Leaf icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            </svg>
+          </div>
           <h3>Thé Premium</h3>
-          <p>
-            Sélectionné avec soin pour une infusion équilibrée et naturelle.
-          </p>
+          <p>Sélectionné avec soin pour une infusion équilibrée et naturelle.</p>
         </div>
 
         <div class="feature-card">
-          <div class="icon-wrapper">🥛</div>
+          <div class="icon-wrapper">
+            <!-- Milk / cup icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2h8l1 10H7L8 2z"/>
+              <path d="M7 12c0 5 2 8 5 8s5-3 5-8"/>
+              <path d="M6 6h12"/>
+            </svg>
+          </div>
           <h3>Lait Onctueux</h3>
-          <p>
-            Une texture crémeuse qui sublime chaque gorgée de votre boisson.
-          </p>
+          <p>Une texture crémeuse qui sublime chaque gorgée de votre boisson.</p>
         </div>
 
         <div class="feature-card">
-          <div class="icon-wrapper">🧋</div>
+          <div class="icon-wrapper">
+            <!-- Bubble tea / cup with straw icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2h8l2 4H6L8 2z"/>
+              <path d="M6 6l1 14h10l1-14"/>
+              <line x1="12" y1="2" x2="12" y2="6"/>
+              <circle cx="9" cy="13" r="1" fill="currentColor"/>
+              <circle cx="12" cy="16" r="1" fill="currentColor"/>
+              <circle cx="15" cy="13" r="1" fill="currentColor"/>
+            </svg>
+          </div>
           <h3>Perles "Chewy"</h3>
-          <p>
-            Cuites quotidiennement pour garantir une texture parfaite et
-            fondante.
-          </p>
+          <p>Cuites quotidiennement pour garantir une texture parfaite et fondante.</p>
+        </div>
+      </section>
+
+      <section class="best-sellers">
+        <h2 class="section-title">Nos Incontournables</h2>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/img/products/chesseTea-removebg-preview.png" alt="Cheese tea" />
+            </div>
+            <div class="product-info">
+              <h3>Matcha Cheese Cloud</h3>
+              <p>L'intensité du matcha premium surmontée d'une mousse onctueuse de fromage frais salé.</p>
+              <span class="price">18.000 Ar</span>
+              <button class="btn-add" aria-label="Ajouter au panier">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/img/products/ice-removebg-preview.png" alt="Milkshake" />
+            </div>
+            <div class="product-info">
+              <h3>Velvet Taro Milk</h3>
+              <p>Une douceur onctueuse aux notes de biscuit, accompagnée de perles de tapioca fondantes.</p>
+              <span class="price">15.000 Ar</span>
+              <button class="btn-add" aria-label="Ajouter au panier">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/img/products/mangueRaisinCream-removebg-preview.png" alt="Fruit Tea" />
+            </div>
+            <div class="product-info">
+              <h3>Sunburst Grapes</h3>
+              <p>Un duo explosif de mangue et raisin frais, nappé d'une crème légère pour un max de fraîcheur.</p>
+              <span class="price">14.000 Ar</span>
+              <button class="btn-add" aria-label="Ajouter au panier">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+
+    <div class="footer-wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column footer-brand">
+          <img src="assets/img/logo-sans-fond.png" alt="Logo Sweet Tea" class="footer-logo" />
+          <p>Le bonheur dans chaque perle, <br /> fait avec amour à Antananarivo.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <!-- Facebook icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <!-- Instagram icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="WhatsApp">
+              <!-- WhatsApp / message icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-list">
+            <li>
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              Analakely, Antananarivo
+            </li>
+            <li>
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.55 2 2 0 0 1 3.64 1.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/>
+              </svg>
+              +261 34 00 000 00
+            </li>
+            <li>
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+              hello@sweettea.mg
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Horaires</h4>
+          <ul class="footer-list">
+            <li>
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              Lun - Ven : 09h00 - 18h00
+            </li>
+            <li>
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              Samedi : 10h00 - 19h00
+            </li>
+            <li>
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              Dimanche : Fermé
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sweet Tea by Family. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

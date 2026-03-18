@@ -26,3 +26,5 @@ sweetTea/
 
 ## 👤 Développeurs
 * **Kiady Andrianasolo** - [GitHub](https://github.com/Kiady06)
+* **Armel** - [GitHub](https://github.com/nirinaarmel2)
+* **Fenohasina** - [GitHub](https://github.com/Noem01-tech)

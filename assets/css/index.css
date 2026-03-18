@@ -2,36 +2,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
-    /* Couleurs Principales (Thé & Nature) */
-    --color-primary: #1B3C26;        /* Vert Sombre : Identité forte, headers, titres */
-    --color-secondary: #A3C9A8;      /* Vert Tendre : Accents légers, bordures, hover */
-    
-    /* Couleur d'Action (Accent) */
-    --color-accent: #F28D61;         /* Orange Corail : Boutons, prix, éléments cliquables */
-    --color-accent-hover: #E57B4D;   /* Version légèrement plus sombre pour le survol */
+  /* ── Couleurs Principales (Thé & Nature) ── */
+  --color-primary:        #1B3C26;   /* Vert Sombre : headers, titres, footer */
+  --color-secondary:      #A3C9A8;   /* Vert Tendre : accents légers, bordures, hover */
 
-    /* Couleurs de Neutres & Fond */
-    --color-bg-main: #EAEAEA;        /* Gris Logo : Fond de page très doux */
-    --color-text-main: #333333;      /* Anthracite : Texte principal (confort de lecture) */
-    --color-white: #FFFFFF;          /* Blanc pur : Pour les cartes ou éléments en relief */
+  /* ── Couleur d'Action (Accent) ── */
+  --color-accent:         #F28D61;   /* Orange Corail : boutons, prix, CTA */
+  --color-accent-hover:   #E57B4D;   /* Corail foncé : état survol */
+
+  /* ── Fond & Neutres ── */
+  --color-bg-main:        #EAEAEA;   /* Gris Logo : fond de page */
+  --color-bg-card:        #FFFFFF;   /* Blanc : cartes, header */
+  --color-bg-card-glass:  rgba(255, 255, 255, 0.6); /* Verre givré : product cards */
+
+  /* ── Textes ── */
+  --color-text-main:      #333333;   /* Anthracite : corps de texte */
+  --color-text-muted:     rgba(51, 51, 51, 0.7);   /* Corps atténué */
+  --color-white:          #FFFFFF;
+
+  /* ── Effets & Ombres ── */
+  --shadow-card:          0 0 5px rgba(0, 0, 0, 0.05);
+  --shadow-btn:           0 10px 20px rgba(242, 141, 97, 0.3);
+  --shadow-feature-hover: 0 20px 40px rgba(27, 60, 38, 0.08);
+
+  /* ── Overlay footer ── */
+  --color-footer-bg:      var(--color-primary);
+  --color-footer-icon-bg: rgba(255, 255, 255, 0.1);
+  --color-footer-border:  rgba(255, 255, 255, 0.1);
+  --color-footer-heading: var(--color-secondary);
 }
 
-h1 {
-  font-family: 'Cherry Bomb One';
-}
-
+/* ─────────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────────── */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  font-family: 'Cherry Bomb One', cursive;
 }
 
 body {
   background-color: var(--color-bg-main);
-  height: 100vh;
+  min-height: 100vh;
 }
 
+/* ─────────────────────────────────────────
+   HEADER
+───────────────────────────────────────── */
 header {
   display: flex;
   height: 6rem;
@@ -40,17 +62,16 @@ header {
   margin: 20px auto;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-white);
+  background-color: var(--color-bg-card);
   padding: 2ch;
   border-radius: 25px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card);
 }
 
 header > a {
   height: 120%;
   display: flex;
   align-items: center;
-  
 }
 
 header img {
@@ -66,7 +87,7 @@ header img {
   gap: 40px;
 }
 
-.header-list-links a { 
+.header-list-links a {
   text-decoration: none;
   color: var(--color-primary);
   font-weight: 700;
@@ -90,12 +111,18 @@ header img {
   width: 100%;
 }
 
+/* ─────────────────────────────────────────
+   MAIN
+───────────────────────────────────────── */
 main {
   width: 100%;
   margin: 0 auto;
   padding: 2ch;
 }
 
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
 .hero {
   display: flex;
   align-items: center;
@@ -130,8 +157,8 @@ main {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  box-shadow: 0 10px 20px rgba(242, 141, 97, 0.3);
-  transition: transform 0.3s ease, background 0.3s;
+  box-shadow: var(--shadow-btn);
+  transition: transform 0.3s ease, background-color 0.3s;
 }
 
 .btn-primary:hover {
@@ -150,9 +177,12 @@ main {
 
 @keyframes floating {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50%       { transform: translateY(-20px); }
 }
 
+/* ─────────────────────────────────────────
+   FEATURES
+───────────────────────────────────────── */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -164,7 +194,7 @@ main {
 }
 
 .feature-card {
-  background-color: var(--color-white);
+  background-color: var(--color-bg-card);
   padding: 40px 30px;
   border-radius: 35px;
   text-align: center;
@@ -172,15 +202,14 @@ main {
   border: 1px solid var(--color-primary);
 }
 
-/* L'effet de survol qui "soulève" la carte */
 .feature-card:hover {
   transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(27, 60, 38, 0.08); /* Ombre légère avec ton Vert Sombre */
+  box-shadow: var(--shadow-feature-hover);
   border-color: var(--color-secondary);
 }
 
 .icon-wrapper {
-  font-size: 3rem;
+  color: var(--color-primary);
   background-color: var(--color-bg-main);
   width: 80px;
   height: 80px;
@@ -189,11 +218,11 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: background 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .feature-card:hover .icon-wrapper {
-  background-color: var(--color-secondary); /* Devient vert tendre au survol */
+  background-color: var(--color-secondary);
 }
 
 .feature-card h3 {
@@ -203,8 +232,215 @@ main {
 }
 
 .feature-card p {
-  color: var(--color-text-main);
+  color: var(--color-text-muted);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────
+   BEST SELLERS
+───────────────────────────────────────── */
+.best-sellers {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 50px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.product-card {
+  background: var(--color-bg-card-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  padding: 30px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-image {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: floating 4s ease-in-out infinite;
+}
+
+.product-info h3 {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-weight: 800;
+  color: var(--color-primary);
+  font-size: 1.3rem;
+}
+
+.btn-add {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-add:hover {
+  background-color: var(--color-accent-hover);
+  transform: rotate(90deg);
+}
+
+/* ─────────────────────────────────────────
+   FOOTER WAVE
+───────────────────────────────────────── */
+.footer-wave {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 80px;
+}
+
+.footer-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.footer-wave .shape-fill {
+  fill: var(--color-footer-bg);
+}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-white);
+  padding: 40px 0 20px;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+}
+
+.footer-column h4 {
+  font-family: 'Cherry Bomb One', cursive;
+  color: var(--color-footer-heading);
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.footer-logo {
+  height: 70px;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-brand p {
+  line-height: 1.6;
   opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-list li {
+  margin-bottom: 15px;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ── Réseaux Sociaux ── */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-footer-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-5px);
+}
+
+/* ── Copyright ── */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-footer-border);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  opacity: 0.5;
 }

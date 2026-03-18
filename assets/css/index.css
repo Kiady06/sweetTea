@@ -108,6 +108,7 @@ main {
   color: var(--color-primary);
   line-height: 1.1;
   margin-bottom: 20px;
+  letter-spacing: -2px;
 }
 
 .text-accent {
@@ -150,4 +151,60 @@ main {
 @keyframes floating {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background-color: var(--color-white);
+  padding: 40px 30px;
+  border-radius: 35px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid var(--color-primary);
+}
+
+/* L'effet de survol qui "soulève" la carte */
+.feature-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(27, 60, 38, 0.08); /* Ombre légère avec ton Vert Sombre */
+  border-color: var(--color-secondary);
+}
+
+.icon-wrapper {
+  font-size: 3rem;
+  background-color: var(--color-bg-main);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.feature-card:hover .icon-wrapper {
+  background-color: var(--color-secondary); /* Devient vert tendre au survol */
+}
+
+.feature-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  color: var(--color-text-main);
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
 }

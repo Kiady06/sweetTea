@@ -1,36 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
-:root {
-  /* ── Couleurs Principales (Thé & Nature) ── */
-  --color-primary:        #1B3C26;   /* Vert Sombre : headers, titres, footer */
-  --color-secondary:      #A3C9A8;   /* Vert Tendre : accents légers, bordures, hover */
-
-  /* ── Couleur d'Action (Accent) ── */
-  --color-accent:         #F28D61;   /* Orange Corail : boutons, prix, CTA */
-  --color-accent-hover:   #E57B4D;   /* Corail foncé : état survol */
-
-  /* ── Fond & Neutres ── */
-  --color-bg-main:        #EAEAEA;   /* Gris Logo : fond de page */
-  --color-bg-card:        #FFFFFF;   /* Blanc : cartes, header */
-  --color-bg-card-glass:  rgba(255, 255, 255, 0.6); /* Verre givré : product cards */
-
-  /* ── Textes ── */
-  --color-text-main:      #333333;   /* Anthracite : corps de texte */
-  --color-text-muted:     rgba(51, 51, 51, 0.7);   /* Corps atténué */
-  --color-white:          #FFFFFF;
-
-  /* ── Effets & Ombres ── */
-  --shadow-card:          0 0 5px rgba(0, 0, 0, 0.05);
-  --shadow-btn:           0 10px 20px rgba(242, 141, 97, 0.3);
-  --shadow-feature-hover: 0 20px 40px rgba(27, 60, 38, 0.08);
-
-  /* ── Overlay footer ── */
-  --color-footer-bg:      var(--color-primary);
-  --color-footer-icon-bg: rgba(255, 255, 255, 0.1);
-  --color-footer-border:  rgba(255, 255, 255, 0.1);
-  --color-footer-heading: var(--color-secondary);
-}
 
 /* ─────────────────────────────────────────
    RESET & BASE
@@ -52,72 +19,11 @@ body {
 }
 
 /* ─────────────────────────────────────────
-   HEADER
-───────────────────────────────────────── */
-header {
-  display: flex;
-  height: 6rem;
-  width: 90vw;
-  max-width: 1200px;
-  margin: 20px auto;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--color-bg-card);
-  padding: 2ch;
-  border-radius: 25px;
-  box-shadow: var(--shadow-card);
-}
-
-header > a {
-  height: 120%;
-  display: flex;
-  align-items: center;
-}
-
-header img {
-  height: 120%;
-  width: auto;
-  object-fit: contain;
-}
-
-.header-links {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  gap: 40px;
-}
-
-.header-list-links a {
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-  position: relative;
-}
-
-.header-list-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: var(--color-accent);
-  transition: width 0.3s ease;
-}
-
-.header-list-links a:hover::after {
-  width: 100%;
-}
-
-/* ─────────────────────────────────────────
    MAIN
 ───────────────────────────────────────── */
 main {
   width: 100%;
-  margin: 0 auto;
-  padding: 2ch;
+  padding: 5ch 2ch 0 2ch;
 }
 
 /* ─────────────────────────────────────────
@@ -127,15 +33,19 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  height: calc(100dvh  - 5rem);
   gap: 40px;
 }
 
 .hero-content h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--color-primary);
   line-height: 1.1;
   margin-bottom: 20px;
-  letter-spacing: -2px;
+}
+
+.hero-content > p {
+  line-height: 1.5;
 }
 
 .text-accent {
@@ -183,7 +93,7 @@ main {
 /* ─────────────────────────────────────────
    FEATURES
 ───────────────────────────────────────── */
-.features {
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -235,12 +145,36 @@ main {
   color: var(--color-text-muted);
   font-size: 1rem;
   line-height: 1.6;
+  text-align: justify;
+}
+
+/* ─────────────────────────────────────────
+   INGREDIENTS CTA
+───────────────────────────────────────── */
+.ingredients-cta {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  color: var(--color-text-main);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.cta-text span {
+  font-family: 'Cherry Bomb One', cursive;
+  color: var(--color-accent);
+  font-size: 1.6rem;
 }
 
 /* ─────────────────────────────────────────
    BEST SELLERS
 ───────────────────────────────────────── */
-.best-sellers {
+.cards-container {
   width: 90%;
   max-width: 1200px;
   margin: 100px auto;
@@ -302,6 +236,7 @@ main {
   color: var(--color-text-muted);
   font-size: 0.9rem;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .price {
@@ -338,8 +273,8 @@ main {
 .footer-wave {
   width: 100%;
   overflow: hidden;
-  line-height: 0;
   margin-top: 80px;
+  transform: rotate(180deg);
 }
 
 .footer-wave svg {

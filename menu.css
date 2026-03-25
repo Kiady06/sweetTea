@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* h1{
+    font-family: "Cherry Bomb One";
+}
+
+:root {
+  /* ── Couleurs Principales (Thé & Nature) ── */
+  --color-primary:        #1B3C26;   /* Vert Sombre : headers, titres, footer */
+  --color-secondary:      #A3C9A8;   /* Vert Tendre : accents légers, bordures, hover */
+
+  /* ── Couleur d'Action (Accent) ── */
+  --color-accent:         #F28D61;   /* Orange Corail : boutons, prix, CTA */
+  --color-accent-hover:   #E57B4D;   /* Corail foncé : état survol */
+
+  /* ── Fond & Neutres ── */
+  --color-bg-main:        #EAEAEA;   /* Gris Logo : fond de page */
+  --color-bg-card:        #FFFFFF;   /* Blanc : cartes, header */
+  --color-bg-card-glass:  rgba(255, 255, 255, 0.6); /* Verre givré : product cards */
+
+  /* ── Textes ── */
+  --color-text-main:      #333333;   /* Anthracite : corps de texte */
+  --color-text-muted:     rgba(51, 51, 51, 0.7);   /* Corps atténué */
+  --color-white:          #FFFFFF;
+
+  /* ── Effets & Ombres ── */
+  --shadow-card:          0 0 5px rgba(0, 0, 0, 0.05);
+  --shadow-btn:           0 10px 20px rgba(242, 141, 97, 0.3);
+  --shadow-feature-hover: 0 20px 40px rgba(27, 60, 38, 0.08);
+
+  /* ── Overlay footer ── */
+  --color-footer-bg:      var(--color-primary);
+  --color-footer-icon-bg: rgba(255, 255, 255, 0.1);
+  --color-footer-border:  rgba(255, 255, 255, 0.1);
+  --color-footer-heading: var(--color-secondary);
+}
+
+@keyframes droiteGauche{
+    0%{transform:rotate(0deg);}
+
+    25%{transform: rotate(10deg);}
+
+    50%{transform: rotate(0deg);}
+
+    75%{transform: rotate(-10deg);}
+
+    100%{transform:rotate(0deg) ;}
+}
+
+@keyframes gaucheDroite{
+    0%{transform:rotate(0deg);}
+
+    25%{transform: rotate(-10deg);}
+
+    50%{transform: rotate(0deg);}
+
+    75%{transform: rotate(10deg);}
+
+    100%{transform:rotate(0deg) ;}
+}
+
+@keyframes hautBas{
+    0%{transform:translateY(0);}
+
+    50%{transform: translateY(1vh);}
+
+    100%{transform: translateY(0);}
+}
+
+@keyframes carous{
+    0%{transform: translateX(0);}
+
+    50%{transform: translateX(15vw);}
+
+    100%{transform: translateX(30vw);}
+}
+
+body{
+    background-image:linear-gradient(rgba(187, 187, 187, 0.3),rgba(193, 193, 193, 0.3));
+    /* url(assets/img/background/fond_arbre.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    
+}
+
+header{
+    width: 100%;
+    height: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-secondary);
+}
+
+header .title{
+    width: 100vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .title .header_logo{
+    width:33vw;
+    height: 100%;
+}
+
+header .title .header_logo img{
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: 5vh;
+    margin-right: 5vw;
+}
+
+header .coulis{
+    position: relative;
+    top:30vh;
+    height: 45vh;
+    z-index: -1;
+}
+
+header .title .h1_title textPath{
+    font-size: 3vw; 
+    font-family:"Cherry Bomb One";
+    fill: var(--color-primary);
+}
+
+header .p_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    gap: 1vw;
+    margin-top: -8vh;
+    margin-bottom: 5vh;
+}
+
+header .title .mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .title .p_title p{
+    font-size:2vw;
+    color: var(--color-accent);
+    font-family: 'Cherry Bomb One';
+}
+
+header .p_title hr{
+    width: 1vw;
+    height: 0.5vh;
+    border: none;
+    background-color: var(--color-accent-hover);
+    border-radius: 20%;
+}
+
+header .title .h2_title{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .title .h2_title hr{
+    width: 3vw;
+    height: 0.5vh;
+    background-color:var(--color-primary);
+    border: none;
+    gap: 1vw;
+}
+
+header .title .h2_title h2{
+    font-size: 3vw;
+    margin: auto;
+    font-family:"Quicksand";
+    color: var(--color-primary);
+}
+
+header .title .bubbleTeaImg{
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+header .title .bubbleTeaImg .first{width: 40%;
+    animation:droiteGauche 5s infinite linear;
+    /* margin-top: 1vh; */
+}
+
+header .title .bubbleTeaImg .panda{
+    width: 40%;
+    animation:gaucheDroite 5s infinite linear;
+    margin-left: 5vw;
+}
+
+                               /* FIN DE HEADER  */
+
+main .drinks{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+}
+
+main .drinks h1{
+    color: var(--color-primary);
+    font-family: 'Cherry Bomb One';
+    font-size: 3vw;
+    /* text-shadow:3px 3px 0px var(--color-white), 
+                 0px 0px 15px rgba(255, 255, 255, 0.4); */
+}
+
+main .drinks .carous{
+    width: 30vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 5vh;
+    /* background-color:   aqua; */
+    overflow: hidden;
+}
+
+main .drinks .carous .i1{
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    animation: carous 5s infinite linear;
+}
+
+main .drinks .carous .i2{
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    left: 10vw;
+    animation: carous 5s infinite linear;
+}
+
+main .drinks .carous .i3{
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    left: 20vw;
+    animation: carous 5s infinite linear;
+}
+
+main .drinks .carous .i4{
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    right: 50vw;
+    animation: carous 5s infinite linear;
+}
+
+main .drinks .carous .i5{
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    right: 40vw;
+    animation: carous 5s infinite linear;
+}
+
+main .drinks .carous .i6{
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    right: 30vw;
+    animation: carous 5s infinite linear;
+}
+
+main .drinks .carous img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+main .drinks .products{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vw;
+}
+
+main .drinks .products .p1{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 50vh;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.39);
+    margin-top: 30vh;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.1, 0.7, 1, 1);
+}
+
+main .drinks .products .p1 img{
+    height: 40vh;
+    position: absolute;
+    filter: drop-shadow(0px 0px 4px rgb(233, 145, 214));
+    top: -15vh;
+    left: 6.8vw;
+}
+
+main .drinks .products .p1 .hr{
+    margin-top: 25vh;
+}
+
+main .drinks .products .p1 h2{
+    font-family: 'Quicksand';
+    color: var(--color-primary);
+    text-shadow: 2px 2px 0px rgb(233, 145, 514);
+}
+
+main .drinks .products .p1 .jap{
+    color: var(--color-primary);
+    text-shadow: 2px 2px 0px rgb(233, 145, 514);
+}
+
+main .drinks .products .p1 .prix i{
+    font-size: 2vw;
+    margin-top: 3vh;
+    color: var(--color-accent);
+    transition: all 0.3s cubic-bezier(0.1, 0.7, 1, 1);
+}
+
+main .drinks .products .p1 .prix{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+    padding-bottom: 0vh;
+}
+
+main .drinks .products .p1 .prix p{
+    font-size: 1.5vw;
+    font-family: 'Quicksand';
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+main .drinks .products .p1:hover img{
+    animation: hautBas 4s infinite linear;
+}
+
+main .drinks .products .p1:hover{
+    background-color: white;
+    transform: translateY(-20px);
+    box-shadow: 0 0 2em var(--color-accent-hover);
+    
+}
+
+main .drinks .products .p1 .prix i:hover{
+    transform: rotate(90deg);
+    color: var(--color-accent-hover);
+}
+
+                              /* FIN DE P1 */
+main .drinks .products .p2{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 50vh;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.39);
+    margin-top: 20vh;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-bottom: 5vh;
+    transition: all 0.3s cubic-bezier(0.1, 0.7, 1, 1);
+}
+
+main .drinks .products .p2 img{
+    height: 33vh;
+    position: absolute;
+    filter: drop-shadow(0px 0px 4px rgb(122, 64, 23));
+    top: -12vh;
+    left: 19%;
+}
+
+main .drinks .products .p2 .hr{
+    margin-top: 25vh;
+}
+
+main .drinks .products .p2 h2{
+    font-family: 'Quicksand';
+    color: var(--color-primary);
+    text-shadow: 2px 2px 0px rgba(155, 83, 5, 0.541) ;
+}
+
+main .drinks .products .p2 .jap{
+    color: var(--color-primary);
+    text-shadow: 2px 2px 0px rgba(155, 83, 5, 0.541) ;
+}
+
+main .drinks .products .p2 .prix{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+main .drinks .products .p2 .prix p{
+    font-size: 1.5vw;
+    font-weight: 800;
+    font-family: 'Quicksand';
+    color: var(--color-primary);
+}
+
+main .drinks .products .p2 .prix i{
+    font-size: 2vw;
+    margin-top: 3vh;
+    color: var(--color-accent);
+    transition: all 0.3s cubic-bezier(0.1, 0.7, 1, 1);
+}
+
+main .drinks .products .p2:hover img{
+    animation: hautBas 4s infinite linear;
+}
+
+main .drinks .products .p2:hover{
+    background-color: white;
+    transform: translateY(-20px);
+    box-shadow: 0 0 2em var(--color-accent-hover);
+}
+
+main .drinks .products .p2 .prix i:hover{
+    transform: rotate(90deg);
+    color: var(--color-accent-hover);
+}
+
+                                 /* FIN DE P2  */
+
+main .drinks .products .p3{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 50vh;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.39);
+    margin-top: 30vh;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-bottom: 5vh;
+    transition: all 0.3s cubic-bezier(0.1, 0.7, 1, 1);
+}
+
+main .drinks .products .p3 img{
+    height: 33vh;
+    position: absolute;
+    filter: drop-shadow(0px 0px 4px rgba(185, 117, 44, 0.541));
+    top: -12vh;
+    left: 25%;
+}
+
+main .drinks .products .p3 .hr{
+    margin-top: 25vh;
+}
+
+main .drinks .products .p3 h2{
+    font-family: 'Quicksand';
+    color: var(--color-primary);
+    text-shadow: 2px 2px 0px rgba(185, 117, 44, 0.541) ;
+}
+
+main .drinks .products .p2 .jap{
+    color: var(--color-primary);
+    text-shadow: 2px 2px 0px rgba(185, 117, 44, 0.541) ;
+}
+
+main .drinks .products .p3 .prix{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+main .drinks .products .p3 .prix p{
+    font-size: 1.5vw;
+    font-weight: 800;
+    font-family: 'Quicksand';
+    color: var(--color-primary);
+}
+
+main .drinks .products .p3 .prix i{
+    font-size: 2vw;
+    margin-top: 3vh;
+    color: var(--color-accent);
+    transition: all 0.3s cubic-bezier(0.1, 0.7, 1, 1);
+}
+
+main .drinks .products .p3:hover img{
+    animation: hautBas 4s infinite linear;
+}
+
+main .drinks .products .p3:hover{
+    background-color: white;
+    transform: translateY(-20px);
+    box-shadow: 0 0 2em var(--color-accent-hover);
+}
+
+main .drinks .products .p3 .prix i:hover{
+    transform: rotate(90deg);
+    color: var(--color-accent-hover);
+}
+
+                             /* FIN DE SECTION DRINKS  */
+
+.products{
+    width: 50vw;
+    height: 10vh;
+}
+
+.products .titre{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    display: flex;
+    position: relative;
+}
+
+.products .titre h1{
+    padding-block: 2vh;
+    color: var(--color-primary);
+}
+
+.products .titre::after{
+    content: '';
+    position: absolute;
+    left: 5vw;
+    width: 100%;
+    height: 100%;
+    border-right: 5px solid var(--color-primary);
+    transform: skew(-25deg);
+    background-color: var(--color-secondary);
+    z-index: -1;
+}

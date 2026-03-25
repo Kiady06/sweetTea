@@ -1,46 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-* h1{
-    font-family: "Cherry Bomb One";
-}
-
-:root {
-  /* ── Couleurs Principales (Thé & Nature) ── */
-  --color-primary:        #1B3C26;   /* Vert Sombre : headers, titres, footer */
-  --color-secondary:      #A3C9A8;   /* Vert Tendre : accents légers, bordures, hover */
-
-  /* ── Couleur d'Action (Accent) ── */
-  --color-accent:         #F28D61;   /* Orange Corail : boutons, prix, CTA */
-  --color-accent-hover:   #E57B4D;   /* Corail foncé : état survol */
-
-  /* ── Fond & Neutres ── */
-  --color-bg-main:        #EAEAEA;   /* Gris Logo : fond de page */
-  --color-bg-card:        #FFFFFF;   /* Blanc : cartes, header */
-  --color-bg-card-glass:  rgba(255, 255, 255, 0.6); /* Verre givré : product cards */
-
-  /* ── Textes ── */
-  --color-text-main:      #333333;   /* Anthracite : corps de texte */
-  --color-text-muted:     rgba(51, 51, 51, 0.7);   /* Corps atténué */
-  --color-white:          #FFFFFF;
-
-  /* ── Effets & Ombres ── */
-  --shadow-card:          0 0 5px rgba(0, 0, 0, 0.05);
-  --shadow-btn:           0 10px 20px rgba(242, 141, 97, 0.3);
-  --shadow-feature-hover: 0 20px 40px rgba(27, 60, 38, 0.08);
-
-  /* ── Overlay footer ── */
-  --color-footer-bg:      var(--color-primary);
-  --color-footer-icon-bg: rgba(255, 255, 255, 0.1);
-  --color-footer-border:  rgba(255, 255, 255, 0.1);
-  --color-footer-heading: var(--color-secondary);
-}
-
 @keyframes droiteGauche{
     0%{transform:rotate(0deg);}
 
@@ -92,7 +49,7 @@ body{
     
 }
 
-header{
+.header{
     width: 100%;
     height: auto;
     height: auto;
@@ -101,7 +58,7 @@ header{
     background-color: var(--color-secondary);
 }
 
-header .title{
+.header .title{
     width: 100vw;
     height: 45vh;
     display: flex;
@@ -109,12 +66,12 @@ header .title{
     align-items: center;
 }
 
-header .title .header_logo{
+.header .title .header_logo{
     width:33vw;
     height: 100%;
 }
 
-header .title .header_logo img{
+.header .title .header_logo img{
     width: 80%;
     height: 100%;
     object-fit: contain;
@@ -122,20 +79,20 @@ header .title .header_logo img{
     margin-right: 5vw;
 }
 
-header .coulis{
+.header .coulis{
     position: relative;
     top:30vh;
     height: 45vh;
     z-index: -1;
 }
 
-header .title .h1_title textPath{
+.header .title .h1_title textPath{
     font-size: 3vw; 
     font-family:"Cherry Bomb One";
     fill: var(--color-primary);
 }
 
-header .p_title{
+.header .p_title{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -145,19 +102,19 @@ header .p_title{
     margin-bottom: 5vh;
 }
 
-header .title .mid{
+.header .title .mid{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header .title .p_title p{
+.header .title .p_title p{
     font-size:2vw;
     color: var(--color-accent);
     font-family: 'Cherry Bomb One';
 }
 
-header .p_title hr{
+.header .p_title hr{
     width: 1vw;
     height: 0.5vh;
     border: none;
@@ -165,14 +122,14 @@ header .p_title hr{
     border-radius: 20%;
 }
 
-header .title .h2_title{
+.header .title .h2_title{
     width: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-header .title .h2_title hr{
+.header .title .h2_title hr{
     width: 3vw;
     height: 0.5vh;
     background-color:var(--color-primary);
@@ -180,14 +137,14 @@ header .title .h2_title hr{
     gap: 1vw;
 }
 
-header .title .h2_title h2{
+.header .title .h2_title h2{
     font-size: 3vw;
     margin: auto;
     font-family:"Quicksand";
     color: var(--color-primary);
 }
 
-header .title .bubbleTeaImg{
+.header .title .bubbleTeaImg{
     width: 30vw;
     height: 100%;
     display: flex;
@@ -197,12 +154,12 @@ header .title .bubbleTeaImg{
     margin-top: 5vh;
 }
 
-header .title .bubbleTeaImg .first{width: 40%;
+.header .title .bubbleTeaImg .first{width: 40%;
     animation:droiteGauche 5s infinite linear;
     /* margin-top: 1vh; */
 }
 
-header .title .bubbleTeaImg .panda{
+.header .title .bubbleTeaImg .panda{
     width: 40%;
     animation:gaucheDroite 5s infinite linear;
     margin-left: 5vw;
@@ -530,6 +487,8 @@ main .drinks .products .p3 .prix i:hover{
 .products{
     width: 50vw;
     height: 10vh;
+    position: relative;
+    left: 0;
 }
 
 .products .titre{
@@ -541,7 +500,7 @@ main .drinks .products .p3 .prix i:hover{
 }
 
 .products .titre h1{
-    padding-block: 2vh;
+    padding: 1ch;
     color: var(--color-primary);
 }
 

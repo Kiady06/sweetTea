@@ -15,11 +15,15 @@
 
 ## 🧪 Comment tester ?
 1. Faire un `git pull` de cette branche.
-2. Ouvrir `index.html`.
+2. Ouvrir `votre page`.
 3. Vérifier si les changements passents
 
 ## 🏁 Checklist pour l'équipe
 - [ ] Mon code est bien indenté (propre).
-- [ ] J'ai testé sur mon navigateur et ça s'affiche bien.
+- [ ] J'ai testé sur mon navigateur et ça s'affiche bien. !!! IMPORTANT
+
+
+*VERIFIEO TSARA ILAY CODE AZAFADY*
+*ILAY ANARANA CLASSE ATAOVY MITENY AZAFADY, TSY P1, P2 NA TSY AIKO*
 
 ---

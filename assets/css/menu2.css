@@ -42,6 +42,8 @@
     font-family: 'Quicksand',sans-serif;
 }
 
+
+
 @keyframes strawberry{
     0%{transform: translateY(0) translate(-30%,0);}
 
@@ -653,4 +655,136 @@ main #carte .produit_cards .card .card_text button{
     background-color: var(--color-secondary);
     border: none;
     border-radius: 15px;
+}
+
+                                        /* MEDIA  */
+
+@media (max-width:740px){
+
+    /* *{outline: 1px solid red ;} */
+
+main .title p{
+    text-align: center;
+}
+
+main .title button{
+    font-size:1rem;
+    width: 30vw;
+    height: ;
+}
+
+                                /* BEST SELLERS  */
+
+main .best_sellers .best_cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .best_sellers .best_cards .card .card_img .remove{
+    width: 30vw;
+    height: 30vh;
+    left:40vw;
+}
+
+main .best_sellers .best_cards .card{
+    width: 80vw;
+}
+
+main .best_sellers .best_cards .card .card_text button{
+    width: 30vw;
+    height: 6vh;
+}
+
+                                        /* CARTE  */
+
+main #carte .boisson_cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15vh;
+}
+
+main #carte .boisson_cards .card{
+    width: 80vw
+}
+
+main #carte .boisson_cards .card .card_img .remove{
+    left: 40vw;
+    width: 30vw;
+    height: 30vh;
+}
+
+main #carte .boisson_cards .card .card_text{
+    padding-left: 3vw;
+}
+
+main #carte .boisson_cards .card .card_text button{
+    width: 30vw;
+    height: 6vh;
+}
+
+                            /* GOURMANDISE  */
+
+main #carte .gourmandise_title{
+    text-align: center;
+}
+
+main #carte .gourmandise_cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #carte .gourmandise_cards .card{
+    width: 80vw;
+}
+
+main #carte .gourmandise_cards .card .card_text{
+    padding-left: 3vw;
+}
+
+main #carte .gourmandise_cards .card .card_text button{
+    width: 30vw;
+    height: 6vh;
+}
+
+                                        /* AUTRES PRODUITS  */
+
+main #carte .produit_cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #carte .produit_cards .card{
+    width: 80vw;
+}
+
+main #carte .produit_cards .card .card_text{
+    padding-left: 3vw;
+}
+
+main #carte .produit_cards .card .card_text button{
+    width: 30vw;
+    height: 6vh;
+}
+
+                                    /* HOVER RESPONSIVE  */
+
+@keyframes buttonResp{
+   0%{transform: translateX(-10vw) skew(-45deg);}
+
+   15%{transform: translateX(30vw) skew(-45deg);}
+
+    50%{transform: translateX(30vw);}
+
+    75%{transform:translateX(30vw);}
+   
+    100%{transform:translateX(30vw);}
+}
+
+main button:hover::before{
+    animation: buttonResp 4s infinite linear;
+}
 }

@@ -83,7 +83,7 @@ main {
 }
 
 .hero-image img {
-  width: 420px;
+  width: 350px;
   max-width: 100%;
   animation: floating 3s ease-in-out infinite;
 }

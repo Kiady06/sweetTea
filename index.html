@@ -19,6 +19,13 @@
       <a href="index.html">
         <img src="assets/img/logo-sans-fond.png" alt="logo de sweet tea" />
       </a>
+      <!-- Bouton hamburger (visible sur mobile uniquement) -->
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
      <nav class="header-nav">
 
   <ul class="header-links">
@@ -417,21 +424,8 @@
               +261 34 00 000 00
             </li>
             <li>
-              <svg
-                class="footer-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
               hello@sweettea.mg
@@ -504,5 +498,24 @@
         <p>&copy; 2026 Sweet Tea by Family. All rights reserved.</p>
       </div>
     </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav    = document.querySelector('.header-nav');
+
+    burger.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('.header-list-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
   </body>
 </html>

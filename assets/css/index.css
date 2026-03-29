@@ -1,4 +1,3 @@
-
 /* ─────────────────────────────────────────
    RESET & BASE
 ───────────────────────────────────────── */
@@ -308,4 +307,166 @@ MAP SECTION
 
 .footer-wave .shape-fill {
   fill: var(--color-footer-bg);
+}
+
+/* ═════════════════════════════════════════
+   RESPONSIVE — MOBILE FIRST
+   Breakpoints :
+     ≤ 768px  → tablette / grand mobile
+     ≤ 480px  → petit mobile
+═════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────
+   TABLETTE  (≤ 768px)
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── HERO ── */
+  .hero {
+    flex-direction: column-reverse;   /* image en haut, texte en bas */
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .hero-image {
+    width: 60%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+
+  /* ── FEATURE CARDS ── */
+  .cards {
+    grid-template-columns: 1fr;
+    width: 95%;
+    margin: 50px auto;
+    gap: 20px;
+  }
+
+  /* ── SECTION TITLES ── */
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  /* ── INGREDIENTS CTA ── */
+  .ingredients-cta {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+
+  .cta-text span {
+    font-size: 1.3rem;
+  }
+
+  /* ── CARDS CONTAINER ── */
+  .cards-container {
+    width: 95%;
+    margin: 60px auto;
+  }
+
+  /* ── PRODUCTS GRID ── */
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /* ── MAP ── */
+  .map-section {
+    width: 95%;
+  }
+
+  .map-section .map-container {
+    height: 40vh;
+  }
+
+  /* ── FOOTER WAVE ── */
+  .footer-wave {
+    margin-top: 50px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   PETIT MOBILE  (≤ 480px)
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* ── MAIN ── */
+  main {
+    padding: 4ch 1.2ch 0 1.2ch;
+  }
+
+  /* ── HERO ── */
+  .hero-content h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    padding: 14px 26px;
+    font-size: 0.95rem;
+  }
+
+  .hero-image {
+    width: 75%;
+  }
+
+  /* ── FEATURE CARD ── */
+  .feature-card {
+    padding: 30px 20px;
+    border-radius: 25px;
+  }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  /* ── PRODUCT CARD ── */
+  .product-card {
+    border-radius: 30px;
+    padding: 20px;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .product-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  /* ── MAP ── */
+  .map-section .map-container {
+    height: 50vw;
+    min-height: 200px;
+  }
 }

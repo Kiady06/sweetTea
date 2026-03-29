@@ -38,10 +38,10 @@
     transform: translateX(0) rotate(0deg);
   }
   10% {
-    opacity: 1; /* apparaît progressivement */
+    opacity: 0.5; 
   }
   85% {
-    opacity: 0.8;
+    opacity: 0.2;
   }
   100% {
     top: 110vh; /* sort par le bas */

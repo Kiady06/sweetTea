@@ -1,0 +1,656 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  /* ── Couleurs Principales (Thé & Nature) ── */
+  --color-primary:        #1B3C26;   /* Vert Sombre : headers, titres, footer */
+  --color-secondary:      #A3C9A8;   /* Vert Tendre : accents légers, bordures, hover */
+
+  /* ── Couleur d'Action (Accent) ── */
+  --color-accent:         #F28D61;   /* Orange Corail : boutons, prix, CTA */
+  --color-accent-hover:   #E57B4D;   /* Corail foncé : état survol */
+
+  /* ── Fond & Neutres ── */
+  --color-bg-main:        #EAEAEA;   /* Gris Logo : fond de page */
+  --color-bg-card:        #FFFFFF;   /* Blanc : cartes, header */
+  --color-bg-card-glass:  rgba(255, 255, 255, 0.6); /* Verre givré : product cards */
+
+
+
+  
+  /* ── Textes ── */
+  --color-text-main:      #333333;   /* Anthracite : corps de texte */
+  --color-text-muted:     rgba(51, 51, 51, 0.7);   /* Corps atténué */
+  --color-white:          #FFFFFF;
+
+  /* ── Effets & Ombres ── */
+  --shadow-card:          0 0 5px rgba(0, 0, 0, 0.05);
+  --shadow-btn:           0 10px 20px rgba(242, 141, 97, 0.3);
+  --shadow-feature-hover: 0 20px 40px rgba(27, 60, 38, 0.08);
+
+  /* ── Overlay footer ── */
+  --color-footer-bg:      var(--color-primary);
+  --color-footer-icon-bg: rgba(255, 255, 255, 0.1);
+  --color-footer-border:  rgba(255, 255, 255, 0.1);
+  --color-footer-heading: var(--color-secondary);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand',sans-serif;
+}
+
+@keyframes strawberry{
+    0%{transform: translateY(0) translate(-30%,0);}
+
+    25%{transform: translateY(-1vh) translate(-30%,0);}
+
+    50%{transform: translateY(0) translate(-30%,0);}
+
+    75%{transform: translateY(1vh) translate(-30%,0);}
+
+    100%{transform: translateY(0) translate(-30%,0);}
+}
+
+@keyframes remove{
+    0%{transform: translateY(0) translate(-50%,0);}
+
+    25%{transform: translateY(-1vh) translate(-50%,0);}
+
+    50%{transform: translateY(0) translate(-50%,0);}
+
+    75%{transform: translateY(1vh) translate(-50%,0);}
+
+    100%{transform: translateY(0) translate(-50%,0);}
+}
+
+@keyframes gaucheDroite{
+   0%{transform: translateX(-10vw) skew(-45deg);}
+
+   15%{transform: translateX(15vw) skew(-45deg);}
+
+    50%{transform: translateX(15vw);}
+
+    75%{transform:translateX(15vw);}
+   
+    100%{transform:translateX(15vw);}
+}
+
+main{
+    padding: 10ch 0 0 0;
+}
+
+main button{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+main .card{
+    transition: all 0.5s ease-in-out;
+}
+
+main button::before{
+    content: '';
+    position: absolute;
+    width: 3vw;
+    top: 0;
+    height: 9vh  ;
+    background-color: white;
+    z-index: 1;
+    transform: translate(-10vw);
+}
+
+main .card:hover .card_img .remove{
+    animation: remove 5s linear infinite;
+}
+
+main .best_sellers .card2:hover .strawberry{
+    animation:  strawberry 5s linear infinite;
+}
+
+main .card:hover{
+    transform: scale(1.03);
+}
+
+main #decouvrir:hover{
+    transform: translateY(-0.3vh);
+    box-shadow: 0 0 10px var(--color-accent);
+    background-color: var(--color-accent-hover);
+}
+
+main button:hover::before{
+    animation: gaucheDroite 5s linear infinite;
+}
+
+main button:hover{
+    transform: translateY(-0.3vh);
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+                                 /* menu title  */
+
+main .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding-bottom:2vh;
+    margin-top: 5vh;
+    background-color: var(--color-primary);
+}
+
+main .title .menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+}
+
+main .title .menu h1{
+    color: var(--color-secondary);
+}
+
+main .title .menu hr{
+    width: 3vw;
+    height: 0.5vh;
+    border: none;
+    background-color: var(--color-secondary);
+}
+
+main .title p{
+    color: var(--color-secondary);
+    font-size: larger;
+    padding-left: 1vw;
+}
+
+main .title button{
+    color: white;
+    font-size: 1vw;
+    min-width: 8vw;
+    height: 6vh;
+    background-color: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+    border-radius: 25px;
+    border:none;
+}
+
+                         /* BEST  SELLERS */
+
+main .best_sellers{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+main .best_sellers h1{
+    font-family: 'Cherry Bomb One';
+    color: var(--color-primary);
+}
+
+main .best_sellers .best_cards{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    padding-top: 10vh;
+}
+
+main .best_sellers .best_cards .card{
+    width:20vw ;
+    height: 50vh;
+    display: flex;
+    box-shadow: 0 0 5px black;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-secondary);
+    border-radius: 20px;
+}
+
+main .best_sellers .best_cards .card img{
+    width: 12vw;
+    height: 30vh;
+    position: absolute;
+    top: -12vh;
+    left: 10vw;
+    transform: translate(-50%,0);
+}
+
+main .best_sellers .best_cards .card .card_img{
+    width: 100%;
+    height:40%;
+    border-radius: 20px 20px 0 0;
+    background-color:gray;
+    position: relative;
+}
+
+main .best_sellers .best_cards .card2 .card .strawberry{
+    position: absolute;
+      top: -12vh;
+    left: 10vw;
+    transform: translate(-30%,0);
+    object-fit: cover;
+}
+
+main .best_sellers .best_cards .card .card_text{
+    width: 100%;
+    height: 60%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 2vh;
+    gap: 2vh;
+    background-color: var(--color-primary) ;
+    padding-left: 1vw;
+}
+
+main .best_sellers .best_cards .card .price{
+    font-size: 2ch;
+    font-weight: 800;
+    color: var(--color-accent-hover);
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.63);
+}
+
+main .best_sellers .best_cards .card .card_text button{
+    width: 12vw;
+    height: 5vh;
+    align-self: center;
+    margin-top: 1.5vh;
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 15px;
+}
+
+main .best_sellers .best_cards .card .oreo{
+    filter: drop-shadow(0 0 5px rgb(88, 49, 15));
+}
+
+main .best_sellers .best_cards .card .strawberry{
+    filter: drop-shadow(0 0 5px pink);
+}
+
+main .best_sellers .best_cards .card .americano{
+    filter: drop-shadow(0 0 5px rgb(213, 114, 8));
+}
+
+main .best_sellers .best_cards .card3{
+    margin-top: 15vh;
+}
+
+main .best_sellers .best_cards .card1{
+    margin-bottom: 15vh;
+}
+
+                                /* CARTE */
+                            
+main #carte{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+main .carte_title{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    gap: 1vw;
+    color: var(--color-secondary);
+}
+
+main .carte_title hr{
+    width: 3vw;
+    height: 0.5vh;
+    background-color: var(--color-secondary);
+    border: none;
+}
+
+                                            /* BOISSON  */
+
+main #carte .boisson_title{
+    padding-block: 5vh;
+    width:fit-content;
+}
+
+main #carte .boisson_title h2{
+    font-family: 'Cherry Bomb One'; 
+    font-size:2rem; 
+    color: var(--color-primary);  
+}
+
+main #carte .boisson_cards{
+    width: 100%;
+    display: flex;
+    background-image: url(../img/background/images.png);
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    gap: 3vw;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    backdrop-filter: blur(5px);
+}
+
+main #carte .boisson_cards .card{
+    width:20vw ;
+    height: 50vh;
+    display: flex;
+    box-shadow: 0 0 5px black;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-secondary);
+    border-radius: 20px;
+    margin-top: 5vh;
+}
+
+main #carte .boisson_cards .card .card_img{
+    width: 100%;
+    height:40%;
+    border-radius: 20px 20px 0 0;
+    background-color:gray;
+    position: relative;
+}
+
+main #carte .boisson_cards .card .card_img img{
+    width: 12vw;
+    height: 30vh;
+    position: absolute;
+    top: -12vh;
+    left: 10vw;
+    transform: translate(-50%,0);
+}
+
+main #carte .boisson_cards .card13 .card_img{
+    position: static;
+}
+
+main #carte .boisson_cards .card13 .card_img img{
+    width: 100%;
+    height: 100%;
+    position: static;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    transform: translate(0,0);
+}
+
+main #carte .boisson_cards .card14 .card_img{
+    position: static;
+}
+
+main #carte .boisson_cards .card14 .card_img img{
+    width: 100%;
+    height: 100%;
+    position: static;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    transform: translate(0,0);
+}
+
+main #carte .boisson_cards .card15 .card_img{
+    position: static;
+}
+
+main #carte .boisson_cards .card15 .card_img img{
+    width: 100%;
+    height: 100%;
+    position: static;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    transform: translate(0,0);
+}
+
+main #carte .boisson_cards .card .card_text{
+    width: 100%;
+    height: 60%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 2vh;
+    gap: 2vh;
+    background-color: var(--color-primary) ;
+    padding-left: 1vw;
+}
+
+main #carte .boisson_cards .card .price{
+    font-size: 2ch;
+    font-weight: 800;
+    color: var(--color-accent-hover);
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.63);
+}
+
+main #carte .boisson_cards .card .card_text button{
+    width: 12vw;
+    height: 5vh;
+    align-self: center;
+    margin-top: 1.5vh;
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 15px;
+}
+
+main #carte .boisson_cards .card1 img{
+    filter: drop-shadow(0 0 5px rgb(211, 211, 15));
+}
+
+main #carte .boisson_cards .card2 img{
+    filter: drop-shadow(0 0 5px Orange);
+}
+
+main #carte .boisson_cards .card3 img{
+    filter: drop-shadow(0 0 5px pink);
+}
+
+main #carte .boisson_cards .card4 img{
+    filter: drop-shadow(0 0 5px red);
+}
+
+main #carte .boisson_cards .card5 img{
+    filter: drop-shadow(0 0 5px pink);
+}
+
+main #carte .boisson_cards .card6 img{
+    filter: drop-shadow(0 0 5px chocolate);
+}
+
+main #carte .boisson_cards .card7 img{
+    filter: drop-shadow(0 0 5px chocolate);
+}
+
+main #carte .boisson_cards .card8 img{
+    filter: drop-shadow(0 0 5px lime);
+}
+
+main #carte .boisson_cards .card9 img{
+    filter: drop-shadow(0 0 5px orange);
+}
+
+main #carte .boisson_cards .card10 img{
+    filter: drop-shadow(0 0 5px chocolate);
+}
+
+main #carte .boisson_cards .card11 img{
+    filter: drop-shadow(0 0 5px chocolate);
+}
+
+main #carte .boisson_cards .card12 img{
+    filter: drop-shadow(0 0 5px violet);
+}
+
+                                    /* GOURMANDISE */
+
+main #carte .gourmandise_title{
+    padding-block: 5vh;
+    width:fit-content;
+}
+
+main #carte .gourmandise_title h2{
+    font-family: 'Cherry Bomb One'; 
+    font-size:2rem; 
+    color: var(--color-primary);  
+}
+
+main #carte .gourmandise_cards{
+    width: 100%;
+    display: flex;
+    background-image: url(../img/background/images.png);
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    gap: 10vw;
+    row-gap: 5vh;
+    padding-top: 10vh;
+    backdrop-filter: blur(5px);
+    padding-bottom: 5vh;
+}
+
+main #carte .gourmandise_cards .card{
+    width:20vw ;
+    height: 50vh;
+    display: flex;
+    box-shadow: 0 0 5px black;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-secondary);
+    border-radius: 20px;
+    margin-top: 5vh;
+}
+
+main #carte .gourmandise_cards .card .card_img{
+    width: 100%;
+    height:40%;
+    border-radius: 20px 20px 0 0;
+    background-color:gray;
+}
+
+main #carte .gourmandise_cards .card .card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+main #carte .gourmandise_cards .card .card_text{
+    width: 100%;
+    height: 60%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 2vh;
+    gap: 2vh;
+    background-color: var(--color-primary) ;
+    padding-left: 1vw;
+}
+
+main #carte .gourmandise_cards .card .price{
+    font-size: 2ch;
+    font-weight: 800;
+    color: var(--color-accent-hover);
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.63);
+}
+
+main #carte .gourmandise_cards .card .card_text button{
+    width: 12vw;
+    height: 5vh;
+    align-self: center;
+    margin-top: 1.5vh;
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 15px;
+}
+
+                                        /* AUTRES PRODUITS */
+                                    
+
+main #carte .produit_title{
+    width:fit-content;
+    padding-block: 5vh;
+}
+
+main #carte .produit_title h2{
+    font-family: 'Cherry Bomb One'; 
+    font-size:2rem; 
+    color: var(--color-primary);  
+}
+
+main #carte .produit_cards{
+    width: 100%;
+    display: flex;
+    background-image: url(../img/background/images.png);
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    gap: 10vw;
+    row-gap: 5vh;
+    padding-top: 10vh;
+    backdrop-filter: blur(5px);
+    padding-bottom: 5vh;
+}
+
+main #carte .produit_cards .card{
+    width:20vw ;
+    height: 50vh;
+    display: flex;
+    box-shadow: 0 0 5px black;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-secondary);
+    border-radius: 20px;
+    margin-top: 5vh;
+}
+
+main #carte .produit_cards .card .card_img{
+    width: 100%;
+    height:40%;
+    border-radius: 20px 20px 0 0;
+    background-color:gray;
+}
+
+main #carte .produit_cards .card .card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+main #carte .produit_cards .card .card_text{
+    width: 100%;
+    height: 60%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 2vh;
+    gap: 2vh;
+    background-color: var(--color-primary) ;
+    padding-left: 1vw;
+}
+
+main #carte .produit_cards .card .price{
+    font-size: 2ch;
+    font-weight: 800;
+    color: var(--color-accent-hover);
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.63);
+}
+
+main #carte .produit_cards .card .card_text button{
+    width: 12vw;
+    height: 5vh;
+    align-self: center;
+    margin-top: 1.5vh;
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 15px;
+}

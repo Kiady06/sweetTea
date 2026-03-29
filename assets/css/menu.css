@@ -193,6 +193,7 @@ main .drinks .carous{
     top: 5vh;
     /* background-color:   aqua; */
     overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.067);
 }
 
 main .drinks .carous .i1{
@@ -286,11 +287,13 @@ main .drinks .products .p1 h2{
     font-family: 'Quicksand';
     color: var(--color-primary);
     text-shadow: 2px 2px 0px rgb(233, 145, 514);
+    padding-left: 1rem;
 }
 
 main .drinks .products .p1 .jap{
     color: var(--color-primary);
     text-shadow: 2px 2px 0px rgb(233, 145, 514);
+    padding-left: 1rem;
 }
 
 main .drinks .products .p1 .prix i{
@@ -364,11 +367,13 @@ main .drinks .products .p2 h2{
     font-family: 'Quicksand';
     color: var(--color-primary);
     text-shadow: 2px 2px 0px rgba(155, 83, 5, 0.541) ;
+    padding-left: 1rem;
 }
 
 main .drinks .products .p2 .jap{
     color: var(--color-primary);
     text-shadow: 2px 2px 0px rgba(155, 83, 5, 0.541) ;
+    padding-left: 1rem;
 }
 
 main .drinks .products .p2 .prix{
@@ -439,11 +444,13 @@ main .drinks .products .p3 h2{
     font-family: 'Quicksand';
     color: var(--color-primary);
     text-shadow: 2px 2px 0px rgba(185, 117, 44, 0.541) ;
+    padding-left: 1rem;
 }
 
-main .drinks .products .p2 .jap{
+main .drinks .products .p3 .jap{
     color: var(--color-primary);
     text-shadow: 2px 2px 0px rgba(185, 117, 44, 0.541) ;
+    padding-left: 1rem;
 }
 
 main .drinks .products .p3 .prix{
@@ -485,33 +492,67 @@ main .drinks .products .p3 .prix i:hover{
                              /* FIN DE SECTION DRINKS  */
 
 .products{
+<<<<<<< Updated upstream:assets/css/menu.css
     width: 50vw;
     height: 10vh;
     position: relative;
     left: 0;
+=======
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+>>>>>>> Stashed changes:menu.css
 }
 
 .products .titre{
-    width: 100%;
+    width: 60vw;
     height: 100%;
-    background-color: var(--color-secondary);
     display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
+    
 }
 
 .products .titre h1{
+<<<<<<< Updated upstream:assets/css/menu.css
     padding: 1ch;
+=======
+    padding-block: auto;
+>>>>>>> Stashed changes:menu.css
     color: var(--color-primary);
+    padding-left: 3rem;
+    font-size: 5rem;
 }
 
-.products .titre::after{
+/* .products .titre::after{
     content: '';
     position: absolute;
-    left: 5vw;
-    width: 100%;
+    background-image:url(assets/img/products/soupePhotogenique.jpg) ;
+    background-image: url(assets/img/products/somosa.jpg);
+    background-image: url(assets/img/products/saladeDeFruitJoliJoli.jpg);
+    background-position: 
+    10% 50%,
+    40% 50%,
+    70% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90%;
     height: 100%;
     border-right: 5px solid var(--color-primary);
-    transform: skew(-25deg);
+    transform: skewX(-25deg);
     background-color: var(--color-secondary);
     z-index: -1;
+<<<<<<< Updated upstream:assets/css/menu.css
 }
+=======
+    transition:transform 0.3s cubic-bezier(0.5,0.7,1,1);
+}
+
+.products .titre:hover::after{
+    transform: translateX(100%) skew(-25deg);
+} */
+
+
+>>>>>>> Stashed changes:menu.css

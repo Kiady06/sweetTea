@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet tea menu</title>
-    <link
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/menu2.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+      <link
       rel="shortcut icon"
       href="assets/img/logo-sans-fond.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/colors.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>menu</title>
+     <title>Menu</title>
 </head>
 <body>
-     <header>
+    <header>
       <a href="index.html">
         <img src="assets/img/logo-sans-fond.png" alt="logo de sweet tea" />
       </a>
@@ -26,8 +23,8 @@
 
   <ul class="header-links">
     <li class="header-list-links"><a href="index.html">Acceuil</a></li>
-    <li class="header-list-links"><a href="menu.html">Menu</a></li>
     <li class="header-list-links"><a href="aboutUs.html">About us</a></li>
+    <li class="header-list-links"><a href="menu.html">Menu</a></li>
   </ul>
 
   <div class="header-actions">
@@ -63,121 +60,357 @@
   </div>
 
 </nav>
-      </nav>
+      </nav> 
     </header>
-    <nav class="header">
-        <div class="title">
-            <div class="header_logo">
-                <img src="assets/img/logo-sans-fond.png" alt="">
-            </div>
-            <div class="mid">
-                <svg viewBox="0 0 500 200" height="30vh" width="33vw"  >
-                    <path id="curve" d="M100,150 Q250,50 400,150" fill="none" />
-                    <text class="h1_title">
-                        <textPath href="#curve" startOffset="50%" text-anchor="middle">
-                            SWEET TEA
-                        </textPath>
-                    </text>
-                </svg>               
-            
-                <div class="p_title">
-                    <hr>
-                    <p>BY FAMILY</p>
-                    <hr>
-                </div>
-                <div class="h2_title">
-                    <hr>
-                    <h2>MENU</h2>
-                    <hr>
-                </div>
-            </div>
-            <div class="bubbleTeaImg">
-                <img src="assets/img/background/images__1_-removebg-preview.png" alt="panda" class="panda">
-                <img src="assets/img/background/images-removebg-preview.png" alt="first" class="first">
-            </div>
-        </div>
-           <svg viewBox="0 0 400 150" width="100%" height="40vh" preserveAspectRatio="none" style="position:absolute; bottom:0; left:0;"
-                class="coulis">
-                <path d="M0 0 H400 V60 C370 60, 360 150, 310 150 C260 150, 250 70, 200 70 C150 70, 140 130, 90 130 C50 130, 30 60, 0 60 Z" fill="#A3C9A8"/>
-                <path d="M310 140 C320 140, 325 125, 325 110" stroke="white" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.2" />
-                <path d="M90 120 C100 120, 105 105, 105 90" stroke="white" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.2" />
-            </svg>    
-    </nav>
 
-    <main>
-        <!-- <section class="drinks cards-container">
-            <h2 class="sec">Best Sellers</h2>
-            <div class="carous">
-                <img src="assets/img/products/bubbleTea2-removebg-preview.png" alt="" class="i1 ">
-                <img src="assets/img/products/chesseTea-removebg-preview.png" alt="" class="i2">
-                <img src="assets/img/products/oreo-removebg-preview.png" alt="" class="i3">
-                <img src="assets/img/products/bubbleTea2-removebg-preview.png" alt="" class="i4">
-                <img src="assets/img/products/chesseTea-removebg-preview.png" alt="" class="i5">
-                <img src="assets/img/products/oreo-removebg-preview.png" alt="" class="i6">
+                                <!-- MAIN  TITLE-->
+  <main>
+    <section class="title">
+      <div class="menu">
+        <hr>
+        <h1>Menu</h1>
+        <hr>
+      </div>
+      <p>Envie de fraîcheur et de gourmandise ? Découvrez vite nos spécialités ! <span><i class="fa-solid fa-utensils"></i></span></p>
+      <a href="#carte"><button id="decouvrir">Découvrir</button></a>
+    </section>
+
+                                    <!-- MAIN BEST SELLERS -->
+
+    <section class="best_sellers">
+      <h1>Best Sellers<i class="fa-solid fa-trophy"></i></h1>
+      <div class="best_cards">
+        <div class="card1">
+          <div class="card ">
+            <div class="card_img">
+              <img src="assets/img/removed/oreo-removebg-preview.png" alt="" class="oreo remove">
             </div>
-            <div class="products">
-              
-                <div class="p1">
-                    <img src="assets/img/products/ice-removebg-preview.png" alt="">
-                    <hr class="hr">
-                    <h2>Milk Shake Fraise</h2>
-                    <hr>
-                    <p class="jap">ストロベリーミルクシェイク</p>
-                    <div class="prix">
-                        <p>18.000 AR</p>
-                        <i class="fa-solid fa-circle-plus"></i>
-                    </div>
-                </div>
-                <div class="p2">
-                    <img src="assets/img/products/oreo-removebg-preview.png" alt="">
-                    <hr class="hr">
-                    <h2>Milk Shake Oreo</h2>
-                    <hr>
-                    <p class="jap">オレオミルクシェイク</p>
-                    <div class="prix">
-                        <p>15.000 Ar</p>
-                        <i class="fa-solid fa-circle-plus"></i>
-                    </div>
-                </div>
-                <div class="p3">
-                    <img src="assets/img/products/latteCoco-removebg-preview.png" alt="">
-                    <hr class="hr">
-                    <h2>Iced Americano</h2>
-                    <hr>
-                    <p class="jap">アイスアメリカーノ</p>
-                    <div class="prix">
-                        <p>13.000 Ar</p>
-                        <i class="fa-solid fa-circle-plus"></i>
-                    </div>
-                </div>
+            <div class="card_text">
+              <h2>Milk-Shake Oreo</h2>
+              <p>ミルクシェイクオレオ</p>
+              <p class="price">Prix : 15.000 Ar</p> 
+              <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
             </div>
-        </section> -->
-        <section class="products">
-            <div class="titre">
-                <h1>Nos produits</h1>    
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card ">
+            <div class="card_img">
+              <img src="assets/img/removed/ice-removebg-preview.png" alt="" class="strawberry remove">
             </div>
-        </section>
-        <section class="menu">
-            <div class="liquid">
-                <h1>
-                    Nos Thés
-                </h1>
-                <div class="each_product" >
-                    <img src="sweetTea/assets/img/products/avocadoCream.jpg" alt="">
-                    <div>
-                        <h2>
-                            Avocado cream
-                        </h2>
-                        <p>
-                            15.000 Ar                        
-                        </p>
-                    </div>
-                </div>
-                
+            <div class="card_text">
+              <h2>Red Berry Milk-Shake</h2>
+              <p>レッドベリーミルクシェイク</p>
+              <p class="price">Prix : 13.000 Ar</p> 
+              <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
             </div>
-        </section>
-    </main>
-    <footer>
+          </div>
+        </div>
+          <div class="card card3">
+            <div class="card_img">
+              <img src="assets/img/removed/iceCoffee-removebg-preview.png" alt="" class="americano remove">
+            </div>
+            <div class="card_text">
+                <h2>Iced Americano</h2>
+                  <p>アイスアメリカーノ</p>
+              <p class="price">Prix : 10.000 Ar</p> 
+              <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+          </div>
+      </div>
+    </section>
+
+                                            <!-- CARTE -->
+
+    <section id="carte">
+      <div class="carte_title">
+        <hr>
+        <h1>Carte</h1>
+        <hr>
+      </div>
+
+                                            <!-- BOISSON  -->
+
+      <div class="boisson_title">
+        <h2>Nos Boissons  <i class="fa-solid fa-mug-hot"></i></h2>
+      </div>    
+      <div class="boisson_cards">
+        <div class="card card1">
+          <div class="card_img">
+            <img src="assets/img/removed/avocadoCream-removebg-preview.png" alt="" class="avocado remove">
+          </div>
+          <div class="card_text">
+            <h2>Avocado Cream</h2>
+            <p class="jap">アボカドクリーム</p>
+            <p class="price">Prix : 10.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="card_img">
+            <img src="assets/img/removed/bubbleTea-removebg-preview (1).png" alt="" class="passionFruit remove">
+          </div>
+          <div class="card_text">
+            <h2>Passion Fruit Juice</h2>
+            <p class="jap">パッションフルーツジュース</p>
+            <p class="price">Prix : 10.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="card_img">
+            <img src="assets/img/removed/bubbleTea2-removebg-preview.png" alt="" class="multifruit remove">
+          </div>
+          <div class="card_text">
+            <h2>Multifruit Shake</h2>
+            <p class="jap">マルチフルーツシェイク</p>
+            <div class="price">Prix : 12.000 Ar</div>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card4">
+          <div class="card_img">
+            <img src="assets/img/removed/chesseTea-removebg-preview.png" alt="" class="watermelon remove">
+          </div>
+          <div class="card_text">
+            <h2>Watermelon Milkshake</h2>
+            <p class="jap">スイカミルクシェイク</p>
+            <p class="price">Prix : 10.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card5">
+          <div class="card_img">
+            <img src="assets/img/removed/ice-removebg-preview.png" alt="" class="strawberry remove">
+          </div>
+          <div class="card_text">
+            <h2>Red Berry Milk-Shake</h2>
+            <p class="jap">レッドベリーミルクシェイク</p>
+            <p class="price">Prix : 13.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card6">
+          <div class="card_img">
+            <img src="assets/img/removed/iceCoffee-removebg-preview.png" alt="" class="americano remove">
+          </div>
+          <div class="card_text">
+            <h2>Iced Americano</h2>
+            <p class="jap">アイスアメリカーノ</p>
+            <p class="price">Prix : 10.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card7">
+          <div class="card_img">
+            <img src="assets/img/removed/latteCoco-removebg-preview.png" alt="" class="chocolate remove">
+          </div>
+          <div class="card_text">
+            <h2>Chocolate Milk</h2>
+            <p class="jap">チョコレートミルク</p>
+            <p class="price">Prix : 10.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card8">
+          <div class="card_img">
+            <img src="assets/img/removed/matcha-removebg-preview.png" alt="" class="matcha remove">
+          </div>
+          <div class="card_text">
+            <h2>Matcha Milk-Shake</h2>
+            <p class="jap">抹茶ミルクシェイク</p>
+            <p class="price">Prix : 12.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card9">
+          <div class="card_img">
+            <img src="assets/img/removed/mehOrange-removebg-preview.png" alt="" class="orange remove">
+          </div>
+          <div class="card_text">
+            <h2>Orange Bubble Tea</h2>
+            <p class="jap">オレンジ色のバブルティー</p>
+            <p class="price">Prix : 15.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card10">
+          <div class="card_img">
+            <img src="assets/img/removed/mehPic-removebg-preview.png" alt="" class="coconut remove">
+          </div>
+          <div class="card_text">
+            <h2>Coco Pink Pearl</h2>
+            <p class="jap">ココピンクパールシェイク</p>
+            <p class="price">Prix : 15.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card11">
+          <div class="card_img">
+            <img src="assets/img/removed/oreo-removebg-preview.png" alt="" class="oreo remove">
+          </div>
+          <div class="card_text">
+            <h2>Milk-Shake Oreo</h2>
+            <p class="jap">ミルクシェイクオレオ</p>
+            <p class="price">Prix : 15.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card12">
+          <div class="card_img">       
+            <img src="assets/img/removed/sweetPotatoCream-removebg-preview.png" alt="" class="grape remove">
+          </div>
+          <div class="card_text">
+            <h2>Grape Milk-Shake</h2>
+            <p class="jap">グレープミルクセーキ</p>
+            <p class="price">Prix : 13.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card13">
+          <div class="card_img">
+            <img src="assets/img/products/coffee2.jpg" alt="" class="icedCoffee">
+          </div>
+          <div class="card_text">
+            <h2>Iced coffee</h2>
+            <p class="jap">アイスコーヒー</p>
+            <p class="price">Prix : 7.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card14">
+          <div class="card_img">
+            <img src="assets/img/products/coffee.jpg" alt="" class="hotCoffe">
+          </div>
+          <div class="card_text">
+            <h2>Hot Coffee</h2>
+            <p class="jap">ホットコーヒー</p>
+            <p class="price">Prix : 5.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card15">
+          <div class="card_img">
+            <img src="assets/img/products/lemonTea.jpg" alt="" class="lemon">
+          </div>
+          <div class="card_text">
+            <h2>Lemon Tea</h2>
+            <p class="jap">レモンティー</p>
+            <p class="price">Prix : 7.000 Ar</p>
+            <button>Ajouter au panier <i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+
+                                          <!-- GOURMANDISE -->
+
+      <div class="gourmandise_title">
+        <h2>Nos Soupes Et Gourmandises  <i class="fa-solid fa-cheese"></i></h2>
+      </div>
+      <div class="gourmandise_cards">
+        <div class="card card1">
+          <div class="card_img">
+            <img src="assets/img/products/soup2.jpg" alt="">
+          </div>
+          <div class="card_text">
+            <h2>Egg Soup</h2>
+            <p class="jap">卵スープ</p>
+            <p class="price">Prix:10.000 Ar</p>
+            <button>Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="card_img">
+            <img src="assets/img/products/soupEgg.jpg" alt="">
+          </div>
+          <div class="card_text">
+            <h2>Spicy Egg Soup</h2>
+            <p class="jap">辛い卵スープ</p>
+            <p class="price">Pix:14.000 Ar</p>
+            <button>Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="card_img">
+            <img src="assets/img/products/soupePhotogenique.jpg" alt="">
+          </div>
+          <div class="card_text">
+            <h2>Special Buldak Soup</h2>
+            <p class="jap">特製ブルダックスープ</p>
+            <p class="price">Prix : 18.000 Ar</p>
+            <button>Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card4">
+          <div class="card_img">
+            <img src="assets/img/products/randomPastry.jpg" alt="">
+          </div>
+          <div class="card_text">
+            <h2>Napoleon Pastry</h2>
+            <p class="jap">ナポレオンペストリー</p>
+            <p class="price">Prix : 8.000 Ar</p>
+            <button>Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card5">
+          <div class="card_img">
+            <img src="assets/img/products/pateAChou.jpg" alt="">
+          </div>
+          <div class="card_text">
+            <h2>Choux Pastry</h2>
+            <p class="jap">シュー生地</p>
+            <p class="price">Prix : 3.000 Ar</p>
+            <button>Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card6">
+          <div class="card_img">
+            <img src="assets/img/products/pao.jpg" alt="">
+          </div>
+          <div class="card_text">
+            <h2>Pao</h2>
+            <p class="jap">包子</p>
+            <p class="price">Prix : 3.000 Ar</p>
+            <button>Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+
+                                        <!-- AUTRES PRODUITS -->
+
+      <div class="produit_title">
+        <h2>Nos Autres produits  <i class="fa-solid fa-plane"></i></h2>
+      </div>
+      <div class="produit_cards">
+        <div class="card card1">
+          <div class="card_img">
+            <img src="assets/img/products/buldaks.jpg" alt="">
+          </div>
+          <div class="card_text">
+            <h2>Buldak</h2>
+            <p class="jap">ブルダック</p>
+            <p class="price">Prix : 12.000 Ar</p>
+            <button>Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="card_img">
+            <img src="assets/img/products/Gemini_Generated_Image_emkch2emkch2emkc.png" alt="">
+          </div>
+          <div class="card_text">
+            <h2>Boissons Gazeuses</h2>
+            <p class="jap">ソフトドリンク</p>
+            <p class="price">Prix : 7.000 Ar</p>
+            <button>Ajouter au panier<i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+                                    <!-- FOOTER -->
+    
+     <footer>
       <div class="footer-container">
         <div class="footer-column footer-brand">
           <img
@@ -191,7 +424,7 @@
           </p>
           <div class="social-links">
             <a href="#" class="social-icon" aria-label="Facebook">
-              <!-- Facebook icon -->
+              <!--Facebook icon -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -375,5 +608,7 @@
         <p>&copy; 2026 Sweet Tea by Family. All rights reserved.</p>
       </div>
     </footer>
+    
+    
 </body>
 </html>

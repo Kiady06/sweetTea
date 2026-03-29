@@ -1,0 +1,52 @@
+/* ═════════════════════════════════════════
+   FEUILLES QUI TOMBENT
+═════════════════════════════════════════ */
+ 
+/* Conteneur global — couvre toute la page sans bloquer les clics */
+.leaves-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* les feuilles ne bloquent pas les clics */
+  z-index: 0;
+  overflow: hidden;
+}
+ 
+/* Chaque feuille */
+.leaf {
+  position: absolute;
+  top: -60px; /* démarre hors écran en haut */
+  opacity: 0;
+  animation: fall linear infinite;
+  z-index: -100;
+}
+ 
+/* La forme de la feuille — SVG inline via background */
+.leaf svg {
+  display: block;
+  fill: var(--color-primary);
+  opacity: 0.25;
+}
+ 
+/* ── Animation de chute ── */
+@keyframes fall {
+  0% {
+    top: -60px;
+    opacity: 0;
+    transform: translateX(0) rotate(0deg);
+  }
+  10% {
+    opacity: 0.5; 
+  }
+  85% {
+    opacity: 0.2;
+  }
+  100% {
+    top: 110vh; /* sort par le bas */
+    opacity: 0;
+    /* balancement horizontal + rotation complète pendant la chute */
+    transform: translateX(var(--sway)) rotate(var(--rotation));
+  }
+}

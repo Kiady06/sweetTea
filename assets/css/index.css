@@ -31,9 +31,12 @@ main {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: calc(100dvh  - 5rem);
-  gap: 40px;
+  justify-content: center;
+  gap: 60px;
+  height: calc(100dvh - 5rem);
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
 }
 
 .hero-content h1 {
@@ -80,7 +83,8 @@ main {
 }
 
 .hero-image img {
-  width: 110%;
+  width: 420px;
+  max-width: 100%;
   animation: floating 3s ease-in-out infinite;
 }
 

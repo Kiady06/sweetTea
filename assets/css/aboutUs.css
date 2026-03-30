@@ -1,62 +1,556 @@
-/* ABOUT US page only (header/footer restent ceux de l'index) */
+/* Page About Us uniquement (navbar + footer = index) */
 
-.about-page { background: linear-gradient(180deg, rgba(163, 201, 168, 0.25), rgba(255, 255, 255, 0.2)); }
-.about-main { padding-top: 7rem; padding-left: 2ch; padding-right: 2ch; }
-
-/* HERO */
-.about-hero { display: flex; justify-content: center; margin-bottom: 40px; }
-.about-hero-inner { width: min(1100px, 100%); background: rgba(27, 60, 38, 0.08); border: 1px solid rgba(27, 60, 38, 0.25); border-radius: 28px; padding: 26px 22px; text-align: center; }
-.about-title { font-family: 'Cherry Bomb One', cursive; color: var(--color-primary); font-size: clamp(2.2rem, 4vw, 3.4rem); letter-spacing: 0.5px; margin-bottom: 10px; text-transform: uppercase; }
-.about-subtitle { color: var(--color-text-main); opacity: 0.85; max-width: 65ch; margin: 0 auto; line-height: 1.6; }
-
-/* LAYOUT */
-.about-showcase { width: min(1200px, 100%); margin: 0 auto; display: grid; grid-template-columns: 240px 1fr 240px; gap: 24px; align-items: start; }
-.side { min-height: 520px; }
-
-/* DEMI-ROUES */
-.half-wheel { width: 240px; height: 520px; position: relative; overflow: hidden; }
-.half-wheel-left { margin-left: -2ch; }
-.half-wheel-right { margin-right: -2ch; }
-
-.half-wheel-title { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 160px; text-align: center; background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(27, 60, 38, 0.25); color: var(--color-primary); padding: 14px; border-radius: 16px; font-weight: 700; }
-
-.ring { width: 520px; height: 520px; border-radius: 50%; position: absolute; top: 0; animation: spin 14s linear infinite; }
-.ring-left { left: -280px; }
-.ring-right { right: -280px; animation-direction: reverse; }
-
-.ring-item { width: 110px; height: 110px; object-fit: contain; position: absolute; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.18)); }
-.ring-item:nth-child(1) { top: 10px; left: 50%; transform: translateX(-50%); }
-.ring-item:nth-child(2) { top: 50%; right: 10px; transform: translateY(-50%); }
-.ring-item:nth-child(3) { bottom: 10px; left: 50%; transform: translateX(-50%); }
-.ring-item:nth-child(4) { top: 50%; left: 10px; transform: translateY(-50%); }
-
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* CENTRE */
-.center { min-height: 520px; }
-.center-card { 
-  background: rgba(255, 255, 255, 0.7); 
-  border: 1px solid rgba(27, 60, 38, 0.22); border-radius: 28px; padding: 22px 18px; box-shadow: var(--shadow-card); }
-.center-title { font-family: 'Cherry Bomb One', cursive; color: var(--color-primary); font-size: 2.2rem; text-align: center; margin-bottom: 14px; }
-.center-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.action-card { background: rgba(163, 201, 168, 0.55); border: 1px solid rgba(27, 60, 38, 0.25); border-radius: 16px; padding: 14px 12px; text-align: center; color: var(--color-primary); display: grid; gap: 6px; }
-.action-card span, .action-card em { font-size: 0.95rem; opacity: 0.9; font-style: normal; }
-.action-card strong { font-size: 1.05rem; letter-spacing: 0.4px; }
-.action-card.wide { grid-column: 1 / -1; }
-.center-note { text-align: center; color: var(--color-text-main); opacity: 0.75; margin-top: 10px; }
-
-/* REVIEWS */
-.reviews { width: min(1200px, 100%); margin: 70px auto 20px; text-align: center; }
-.reviews-kicker { color: var(--color-text-main); opacity: 0.85; margin-bottom: 10px; }
-.reviews-title { font-family: 'Cherry Bomb One', cursive; color: var(--color-primary); font-size: clamp(1.9rem, 3.2vw, 2.8rem); margin-bottom: 22px; }
-.reviews-row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
-.reviews-row img { width: 340px; height: 230px; object-fit: cover; border-radius: 18px; border: 1px solid rgba(27, 60, 38, 0.18); box-shadow: var(--shadow-card); }
-
-/* RESPONSIVE */
-@media (max-width: 980px) {
-  .about-showcase { grid-template-columns: 1fr; }
-  .side, .center { min-height: auto; }
-  .half-wheel { width: 100%; height: 260px; margin-left: 0; margin-right: 0; }
-  .center-actions { grid-template-columns: 1fr; }
+.about-page {
+  overflow-x: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(163, 201, 168, 0.28),
+    rgba(234, 234, 234, 0.35)
+  );
 }
 
+.about-main {
+  padding-top: 7rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* --- Bloc intro (PJ1) --- */
+.about-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.about-hero-inner {
+  width: min(1100px, 100%);
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  background: linear-gradient(
+    145deg,
+    rgba(163, 201, 168, 0.62),
+    rgba(27, 60, 38, 0.08)
+  );
+  border: 1px solid rgba(27, 60, 38, 0.2);
+  border-radius: 48px;
+  box-shadow: 0 12px 40px rgba(27, 60, 38, 0.08);
+}
+
+.about-title {
+  margin: 0 0 1.5rem;
+  font-family: "Cherry Bomb One", cursive;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.about-story {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-story-label {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.about-story-label:first-of-type {
+  margin-top: 0;
+}
+
+.about-story-text {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+}
+
+.about-story-highlight {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.about-hero-intro {
+  max-width: 70ch;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-primary);
+  opacity: 0.92;
+}
+
+/* --- Mise en page (flex) --- */
+.about-showcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2vw;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 0;
+}
+
+.side {
+  min-height: 460px;
+  width: clamp(120px, 18vw, 240px);
+}
+
+.center {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* --- Demi-roues : centre du cercle sur le bord écran --- */
+.half-wheel {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Rayon visible = moitié du diamètre du cercle */
+.half-wheel-left {
+  width: 100%;
+  margin-left: 0;
+}
+
+.half-wheel-right {
+  width: 100%;
+  margin-right: 0;
+}
+
+.ring {
+  position: absolute;
+  width: clamp(260px, 38vw, 520px);
+  height: clamp(260px, 38vw, 520px);
+  border-radius: 50%;
+  top: 50%;
+  pointer-events: none;
+}
+
+.ring-left {
+  left: 0;
+  animation: spin-wheel-left 16s linear infinite;
+}
+
+.ring-right {
+  left: 100%;
+  animation: spin-wheel-right 16s linear infinite;
+}
+
+@keyframes spin-wheel-left {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spin-wheel-right {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+.ring-item {
+  position: absolute;
+  width: clamp(62px, 7vw, 110px);
+  height: clamp(62px, 7vw, 110px);
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.2));
+  z-index: 2;
+}
+
+.ring-item:nth-child(1) {
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ring-item:nth-child(2) {
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+}
+
+.ring-item:nth-child(3) {
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ring-item:nth-child(4) {
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+}
+
+/* Titre au bord intérieur (pas au centre géométrique), au-dessus des images */
+.half-wheel-title {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  max-width: 9.5rem;
+  padding: 0.75rem 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(27, 60, 38, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(27, 60, 38, 0.12);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.half-wheel-left .half-wheel-title {
+  left: 50%;
+  right: auto;
+}
+
+.half-wheel-right .half-wheel-title {
+  left: 50%;
+  right: auto;
+}
+
+.half-wheel-link {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.half-wheel-title:hover .half-wheel-link {
+  color: var(--color-accent-hover);
+}
+
+/* --- Centre : catégories --- */
+.center {
+  min-height: 460px;
+}
+
+.center-card {
+  padding: 1.5rem 1.1rem;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(27, 60, 38, 0.18);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.about-menu-cta {
+  text-align: center;
+  margin-top: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.bloc-histoire {
+  margin-top: 1.15rem;
+  background: rgba(163, 201, 168, 0.18);
+  border: 1px solid rgba(27, 60, 38, 0.18);
+  border-radius: 22px;
+  padding: 1.1rem 1.2rem;
+}
+
+.bloc-histoire .about-story-text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55ch;
+}
+
+.center-title {
+  margin: 0 0 1rem;
+  font-family: "Cherry Bomb One", cursive;
+  font-size: 1.85rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.center-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.action-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  min-height: 100%;
+  padding: 1rem 0.85rem 2.75rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  background: rgba(163, 201, 168, 0.45);
+  border: 1px solid rgba(27, 60, 38, 0.22);
+  border-radius: 18px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.action-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 28px rgba(27, 60, 38, 0.12);
+}
+
+.action-card-featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.35rem 1.25rem 1.35rem;
+  background: linear-gradient(
+    135deg,
+    rgba(163, 201, 168, 0.75),
+    rgba(255, 255, 255, 0.65)
+  );
+  border-width: 2px;
+  border-color: rgba(27, 60, 38, 0.35);
+}
+
+.action-card-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+}
+
+.action-card-icone {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+}
+
+.action-card-featured .action-card-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.action-card-featured .action-card-icone {
+  width: 75%;
+  height: 75%;
+}
+
+.action-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.action-card-kicker {
+  font-size: 0.88rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.action-card-strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.action-card-featured .action-card-strong {
+  font-size: 1.35rem;
+}
+
+.action-card-em {
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--color-text-main);
+  opacity: 0.88;
+}
+
+.action-card-cart {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.55rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-primary);
+  opacity: 0.85;
+}
+
+.action-card-featured .action-card-cart {
+  position: absolute;
+  margin-left: 0;
+  opacity: 1;
+}
+
+.action-card-featured .action-card-cart svg {
+  width: 28px;
+  height: 28px;
+}
+
+.action-card-cart svg {
+  width: 24px;
+  height: 24px;
+}
+
+.texte-commander {
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+/* --- Satisfaction clients + carrousel --- */
+.reviews {
+  width: min(1200px, 100%);
+  margin: 4rem auto 2rem;
+  text-align: center;
+}
+
+.reviews-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+  opacity: 0.85;
+}
+
+.reviews-title {
+  margin: 0 0 1.5rem;
+  font-family: "Cherry Bomb One", cursive;
+  font-size: clamp(1.75rem, 3.5vw, 2.65rem);
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+.reviews-carousel {
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(27, 60, 38, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.reviews-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  padding: 1.1rem;
+  animation: reviews-marquee 28s linear infinite;
+}
+
+.reviews-track:hover {
+  animation-play-state: paused;
+}
+
+.reviews-track img {
+  flex: 0 0 min(340px, 85vw);
+  height: 230px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 1px solid rgba(27, 60, 38, 0.15);
+  box-shadow: var(--shadow-card);
+}
+
+.participation-photos {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.85rem 1.3rem;
+  background: rgba(163, 201, 168, 0.35);
+  border: 1px solid rgba(27, 60, 38, 0.18);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  box-shadow: 0 12px 30px rgba(27, 60, 38, 0.06);
+}
+
+@keyframes reviews-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 9px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .ring-left,
+  .ring-right {
+    animation: none;
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+  .about-showcase {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    gap: 1rem;
+  }
+
+  .side,
+  .center {
+    min-height: auto;
+  }
+
+  .side {
+    width: 100%;
+  }
+
+  .half-wheel {
+    height: 280px;
+  }
+
+  .half-wheel-left,
+  .half-wheel-right {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .center-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .action-card-featured {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .action-card-featured .action-card-cart {
+    position: absolute;
+    right: 0.65rem;
+    bottom: 0.55rem;
+    margin-left: 0;
+  }
+}
